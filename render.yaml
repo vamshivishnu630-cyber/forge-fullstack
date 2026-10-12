@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: forge-fullstack
+    runtime: node
+    plan: free
+    buildCommand: "npm install --no-fund --no-audit"
+    startCommand: "node server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_FILE
+        value: /var/data/forge.db
+    disk:
+      name: forge-data
+      mountPath: /var/data
+      sizeGB: 1
