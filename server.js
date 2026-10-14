@@ -5,7 +5,7 @@ const { DatabaseSync } = require('node:sqlite');
 
 const PORT = +process.env.PORT || 3000;
 const DB_FILE = process.env.DB_FILE || path.join(__dirname, 'forge.db');
-const PUB = path.join(__dirname, 'public');
+const PUB =__dirname;
 const SESSION_DAYS = 7, FEE = 0.1;
 const CATS = ['AI Video', 'Animation', 'Image Generation', '3D', 'Advertising'];
 const STG = ['Found', 'Contacted', 'Replied', 'Negotiating', 'Signed'];
